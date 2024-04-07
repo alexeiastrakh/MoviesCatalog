@@ -2,27 +2,30 @@
 
 <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.24/css/jquery.dataTables.min.css">
 
-<table id="moviesTable" class="display">
-    <thead>
-        <tr>
-            <th>Name</th>
-            <th>Director</th>
-            <th>Release Date</th>
-            <th>Categories</th>
-        </tr>
-    </thead>
-    <tbody>
-        @foreach (var movie in Model)
-        {
+<div class="container">
+    <table id="moviesTable" class="display table table-striped table-bordered">
+        <thead class="thead-dark">
             <tr>
-                <td>@movie.Name</td>
-                <td>@movie.Director</td>
-                <td>@movie.Release.ToShortDateString()</td>
-                <td>@string.Join(", ", movie.FilmCategories.Select(fc => fc.Category.Name))</td>
+                <th>Name</th>
+                <th>Director</th>
+                <th>Release Date</th>
+                <th>Categories</th>
             </tr>
-        }
-    </tbody>
-</table>
+        </thead>
+        <tbody>
+            @foreach (var movie in Model)
+            {
+                <tr>
+                    <td>@movie.Name</td>
+                    <td>@movie.Director</td>
+                    <td>@movie.Release.ToShortDateString()</td>
+                    <td>@string.Join(", ", movie.FilmCategories.Select(fc => fc.Category.Name))</td>
+                </tr>
+            }
+            }
+        </tbody>
+    </table>
+</div>
 
 @section Scripts {
     <script src="~/js/jquery.min.js"></script>
