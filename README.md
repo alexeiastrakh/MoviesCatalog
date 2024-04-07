@@ -1,4 +1,5 @@
 Movies Catalog Project
+
 This project implements a Movies Catalog web application using ASP.NET MVC framework. Below are the main features implemented in this project:
 
 1) CRUD Operations for Movies
