@@ -13,4 +13,4 @@ This project implements a Movies Catalog web application using ASP.NET MVC frame
 
 6) Categories Table with Film Count and Nesting Level
 
-7) Repository pattern implementing
+7) Repository pattern implemented
