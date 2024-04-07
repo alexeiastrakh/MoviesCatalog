@@ -18,7 +18,6 @@ namespace MoviesCatalog.Models.DBContext
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            // Configure relationships between entities
             modelBuilder.Entity<FilmCategory>()
                 .HasKey(fc => new { fc.FilmId, fc.CategoryId });
 
